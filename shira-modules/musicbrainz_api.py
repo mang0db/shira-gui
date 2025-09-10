@@ -5,11 +5,11 @@ from typing import TypedDict
 from requests_cache import CachedSession
 
 from .__init__ import __version__ as shiraver
-from .metadata import clean_title, parse_datestring
-from .tagging import Tags
+from .metadata_parser import clean_title, parse_datestring
+from .metadata_tagger import Tags
 
 # it's better if this is a "submodule" of shira (a part of it)
-# works on it's own (name == __main__), but everything apart from the musibrainz logic doesen't live in it
+# works on it's own (name == __main__), but everything apart from the musicbrainz logic doesen't live in it
 # it's in a separate python module is to have a separate command & to separate the code
 
 # at some point, i might have to just switch this to depend on picard itself or it's submodule - i can only get so far with lookup
